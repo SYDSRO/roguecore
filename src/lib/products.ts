@@ -1,3 +1,4 @@
+// Category placeholder images (used when a product has no photo yet)
 import jerseyFront from "@/assets/jersey-front.jpg";
 import jerseyBack from "@/assets/jersey-back.jpg";
 import shortsFront from "@/assets/shorts-front.jpg";
@@ -8,105 +9,89 @@ import hoodieFront from "@/assets/hoodie-front.jpg";
 import hoodieBack from "@/assets/hoodie-back.jpg";
 import pantsFront from "@/assets/pants-front.jpg";
 import pantsBack from "@/assets/pants-back.jpg";
-import manchesterUnitedRetroRedFront from "@/assets/manchester-united-retro-red-front.png.asset.json";
-import manchesterUnitedRetroBlackBack from "@/assets/manchester-united-retro-black-back-final.png.asset.json";
-import manchesterUnitedRetroBlackFront from "@/assets/manchester-united-retro-black-front.png.asset.json";
-import shortsIslandGrey from "@/assets/Islandgrey.webp.asset.json";
-import shortsIslandPink from "@/assets/island-pink-shorts.png.asset.json";
-import shortsEssentialsBlack from "@/assets/essentialsblack-new.jpg.asset.json";
-import shortsEssentialsGrey from "@/assets/essentialsgrey-new.jpg.asset.json";
-import shortsEssentialsLight from "@/assets/essentialslight-new.jpg.asset.json";
-import shortsDenimBlack from "@/assets/denimblack.webp.asset.json";
-import shortsDenimGrey from "@/assets/denimgrey.webp.asset.json";
-import shortsCheckered from "@/assets/checkered.webp.asset.json";
-import shortsEssentialCoral from "@/assets/essentialcoral.webp.asset.json";
-import shortsDenimNavy from "@/assets/denimnavy.webp.asset.json";
-import pantsEssentialBlack from "@/assets/essentialspantsblack.webp.asset.json";
-import pantsEssentialGrey from "@/assets/essentialspantsgrey.webp.asset.json";
-import pantsEssentialLight from "@/assets/essentialspantslight.webp.asset.json";
-import pantsSGrey from "@/assets/spantsgrey.webp.asset.json";
-import pantsAloBlack from "@/assets/aloblackpants.webp.asset.json";
-import pantsAloGrey from "@/assets/alogreypants.webp.asset.json";
-import pantsAloNavy from "@/assets/alonavypants.webp.asset.json";
-import pants1997Black from "@/assets/1997blackpants.webp.asset.json";
-import pants1997Grey from "@/assets/1997greypants.webp.asset.json";
-import jPortugal2026 from "@/assets/jersey-2026away.webp.asset.json";
-import jAcMilan from "@/assets/jersey-acmilanretro.webp.asset.json";
-import jAjax from "@/assets/jersey-ajax.webp.asset.json";
-import jBarcaJack from "@/assets/jersey-barcajack.webp.asset.json";
-import jBlackoutBrazil from "@/assets/jersey-blackoutbrazil.webp.asset.json";
-import jBrazil2002 from "@/assets/jersey-brazil2002.webp.asset.json";
-import jBrazilEmerald from "@/assets/jersey-brazilemeraldnights.webp.asset.json";
-import jItachi from "@/assets/jersey-itachi.webp.asset.json";
-import jJapanPolo from "@/assets/jersey-japanpolo.webp.asset.json";
-import jInterSnake from "@/assets/jersey-intermilansnake.webp.asset.json";
-import jMadridGreen from "@/assets/jersey-madridgreen.webp.asset.json";
-import jMadridPink from "@/assets/jersey-madridpink.webp.asset.json";
-import jMiamiBape from "@/assets/jersey-miamibape.webp.asset.json";
-import jPinkBarca from "@/assets/jersey-pinkbarca.webp.asset.json";
-import jPortugalSui from "@/assets/jersey-portugalsui.webp.asset.json";
-import jPsg from "@/assets/jersey-psg.webp.asset.json";
-import jSantos from "@/assets/jersey-santos2012.webp.asset.json";
-import jVersace from "@/assets/jersey-vercaceblack.webp.asset.json";
-import hoodie1997Black from "@/assets/1997black-hoodie.png.asset.json";
-import hoodie1997Grey from "@/assets/1997grey-hoodie.png.asset.json";
-import hoodieSGrey from "@/assets/s-hoodie-grey.png.asset.json";
-import hoodieSBlack from "@/assets/s-hoodie-black.png.asset.json";
-import capIslandBlack from "@/assets/island-cap-black.png.asset.json";
-import capIslandBlue from "@/assets/island-cap-blue.png.asset.json";
-import capIslandGreen from "@/assets/island-cap-green.png.asset.json";
-import manuRetroBlackBackV2 from "@/assets/manu-retro-black-back-v2.png.asset.json";
 
-const HOODIES_IMAGES_BY_NAME: Record<string, string> = {
-  "1997 Black Hoodie": hoodie1997Black.url,
-  "1997 Grey Hoodie": hoodie1997Grey.url,
-  "S Hoodie Grey": hoodieSGrey.url,
-  "S Hoodie Black": hoodieSBlack.url,
+// Jersey photos — real image files bundled with the site.
+// NOTE: the old *.asset.json imports were Lovable-hosted pointers whose
+// "/__l5e/assets-v1/..." URLs only resolve on Lovable, so they 404 on
+// Cloudflare and in local dev. Always import actual image files here.
+import manuRedFront from "@/assets/manured.png";
+import manuRedBack from "@/assets/manuredblack.webp";
+import manuBlackFront from "@/assets/manublack.png";
+import manuBlackBack from "@/assets/manublackback.webp";
+import pinkBarcaFront from "@/assets/pinkbarca.webp";
+import pinkBarcaBack from "@/assets/BarcaPinkBack.png";
+import santosFront from "@/assets/Santos.png";
+import santosBack from "@/assets/SantosBack.png";
+import brazil2002Front from "@/assets/Brazil2002.png";
+import brazil2002Back from "@/assets/Brazil2002back.png";
+import brazilEmeraldFront from "@/assets/BrazilEmerald.png";
+import brazilEmeraldBack from "@/assets/EmerladBack.png";
+import acMilanFront from "@/assets/AcMilan.png";
+import acMilanBack from "@/assets/Milanback.png";
+import barcaJackFront from "@/assets/BarcaJack.webp";
+import barcaJackBack from "@/assets/barcajackback.webp";
+import portugal2026Front from "@/assets/portugal2026.webp";
+import portugal2026Back from "@/assets/portugal2026back.webp";
+import portugalSuiFront from "@/assets/jPortugal2026.webp";
+import versaceFront from "@/assets/Versace.webp";
+import versaceBack from "@/assets/Versaceback.webp";
+import madridPinkFront from "@/assets/MadridPink.png";
+import madridPinkBack from "@/assets/PinkMadridBack.png";
+import interSnakeFront from "@/assets/InterSnake.png";
+import interSnakeBack from "@/assets/intersnakeback.webp";
+import itachiFront from "@/assets/Itachi.png";
+import itachiBack from "@/assets/ItachiBack.png";
+import japanPoloFront from "@/assets/JapanPolo.png";
+import madridGreenFront from "@/assets/MadridGreen.png";
+import madridGreenBack from "@/assets/MadridGreenBack.png";
+import psgFront from "@/assets/Psg.png";
+import psgBack from "@/assets/PsgBack.png";
+import miamiBapeFront from "@/assets/MiamiBape.png";
+import miamiBapeBack from "@/assets/miamibapeback.png";
+import blackoutBrazilFront from "@/assets/BlackoutBrazil.png";
+import ajaxFront from "@/assets/Ajax.png";
+import ajaxBack from "@/assets/Ajaxback.png";
+
+type ImagePair = { front: string; back: string };
+
+const JERSEY_IMAGES_BY_NAME: Record<string, ImagePair> = {
+  "Manchester United Retro Red": { front: manuRedFront, back: manuRedBack },
+  "Barcelona Pink Jersey": { front: pinkBarcaFront, back: pinkBarcaBack },
+  "Santos 2012 Jersey": { front: santosFront, back: santosBack },
+  "Brazil 2002 Retro": { front: brazil2002Front, back: brazil2002Back },
+  "Brazil Emerald Nights": { front: brazilEmeraldFront, back: brazilEmeraldBack },
+  "AC Milan Retro": { front: acMilanFront, back: acMilanBack },
+  "Barcelona Cactus Jack": { front: barcaJackFront, back: barcaJackBack },
+  "Portugal 2026 Away": { front: portugal2026Front, back: portugal2026Back },
+  "Italy Vercace Black": { front: versaceFront, back: versaceBack },
+  "Real Madrid Pink Dragon": { front: madridPinkFront, back: madridPinkBack },
+  "Inter Milan Black Snake": { front: interSnakeFront, back: interSnakeBack },
+  "Japan Itachi Kit": { front: itachiFront, back: itachiBack },
+  "Japan Polo Kit": { front: japanPoloFront, back: japanPoloFront }, // no back photo yet
+  "Madrid Green Dragon": { front: madridGreenFront, back: madridGreenBack },
+  "Paris Saint Gemain Nior": { front: psgFront, back: psgBack },
+  "Inter Miami Bape": { front: miamiBapeFront, back: miamiBapeBack },
+  "Brazil Blakcout": { front: blackoutBrazilFront, back: blackoutBrazilFront }, // no back photo yet
+  "Ajax Staryy Night": { front: ajaxFront, back: ajaxBack },
+  "Portugal SUI Jersey": { front: portugalSuiFront, back: portugalSuiFront }, // no back photo yet
 };
 
-const ACCESSORIES_IMAGES_BY_NAME: Record<string, string> = {
-  "Island Cap Black": capIslandBlack.url,
-  "Island Cap Blue": capIslandBlue.url,
-  "Island Cap Green": capIslandGreen.url,
+// Shorts / pants / hoodies / accessories photos are NOT in the repo yet — the
+// originals still live on Lovable. Drop the files into src/assets, import them
+// above, and add entries here keyed by product name. Anything missing falls
+// back to the category placeholder image.
+const SHORTS_IMAGES_BY_NAME: Record<string, ImagePair> = {};
+const PANTS_IMAGES_BY_NAME: Record<string, ImagePair> = {};
+const HOODIES_IMAGES_BY_NAME: Record<string, ImagePair> = {};
+const ACCESSORIES_IMAGES_BY_NAME: Record<string, ImagePair> = {};
+
+const IMAGES_BY_CATEGORY: Record<Category, Record<string, ImagePair>> = {
+  jerseys: JERSEY_IMAGES_BY_NAME,
+  shorts: SHORTS_IMAGES_BY_NAME,
+  accessories: ACCESSORIES_IMAGES_BY_NAME,
+  hoodies: HOODIES_IMAGES_BY_NAME,
+  pants: PANTS_IMAGES_BY_NAME,
 };
-
-
-
-const JERSEY_IMAGES_BY_NAME: Record<string, string> = {
-  "Portugal 2026 Away": jPortugal2026.url,
-  "AC Milan Retro": jAcMilan.url,
-  "Ajax Staryy Night": jAjax.url,
-  "Barcelona Cactus Jack": jBarcaJack.url,
-  "Brazil Blakcout": jBlackoutBrazil.url,
-  "Brazil 2002 Retro": jBrazil2002.url,
-  "Brazil Emerald Nights": jBrazilEmerald.url,
-  "Japan Itachi Kit": jItachi.url,
-  "Japan Polo Kit": jJapanPolo.url,
-  "Inter Milan Black Snake": jInterSnake.url,
-  "Madrid Green Dragon": jMadridGreen.url,
-  "Real Madrid Pink Dragon": jMadridPink.url,
-  "Inter Miami Bape": jMiamiBape.url,
-  "Barcelona Pink Jersey": jPinkBarca.url,
-  "Portugal SUI Jersey": jPortugalSui.url,
-  "Paris Saint Gemain Nior": jPsg.url,
-  "Santos 2012 Jersey": jSantos.url,
-  "Italy Vercace Black": jVersace.url,
-};
-
-const SHORTS_IMAGES = [
-  shortsIslandGrey, shortsIslandPink, shortsEssentialsBlack, shortsEssentialsGrey, shortsEssentialsLight,
-  shortsDenimBlack, shortsDenimGrey, shortsCheckered, shortsEssentialCoral, shortsDenimNavy,
-].map((a) => a.url);
-
-const PANTS_IMAGES: (string | null)[] = [
-  pantsEssentialBlack.url, pantsEssentialGrey.url, pantsEssentialLight.url, pantsSGrey.url,
-  null, // S Pants Black — pending
-  pantsAloBlack.url, pantsAloGrey.url, pantsAloNavy.url, pants1997Black.url, pants1997Grey.url,
-];
-
-
-
-
 
 export type Category = "jerseys" | "shorts" | "accessories" | "hoodies" | "pants";
 
@@ -168,32 +153,9 @@ const generatedProducts: Product[] = (
 
 export const PRODUCTS: Product[] = [
   ...generatedProducts.map((p) => {
-    if (p.id === "jerseys-1") {
-      return { ...p, name: "Manchester United Retro Red", front: manchesterUnitedRetroRedFront.url };
-    }
-    if (p.category === "jerseys" && JERSEY_IMAGES_BY_NAME[p.name]) {
-      const img = JERSEY_IMAGES_BY_NAME[p.name];
-      return { ...p, front: img, back: img };
-    }
-    if (p.category === "shorts") {
-      const idx = parseInt(p.id.split("-")[1], 10) - 1;
-      const img = SHORTS_IMAGES[idx];
-      if (img) return { ...p, front: img, back: img };
-    }
-    if (p.category === "pants") {
-      const idx = parseInt(p.id.split("-")[1], 10) - 1;
-      const img = PANTS_IMAGES[idx];
-      if (img) return { ...p, front: img, back: img };
-    }
-    if (p.category === "hoodies" && HOODIES_IMAGES_BY_NAME[p.name]) {
-      const img = HOODIES_IMAGES_BY_NAME[p.name];
-      return { ...p, front: img, back: img };
-    }
-    if (p.category === "accessories" && ACCESSORIES_IMAGES_BY_NAME[p.name]) {
-      const img = ACCESSORIES_IMAGES_BY_NAME[p.name];
-      return { ...p, front: img, back: img };
-    }
-    return p;
+    const name = p.id === "jerseys-1" ? "Manchester United Retro Red" : p.name;
+    const img = IMAGES_BY_CATEGORY[p.category][name];
+    return img ? { ...p, name, front: img.front, back: img.back } : { ...p, name };
   }),
 
   {
@@ -201,8 +163,8 @@ export const PRODUCTS: Product[] = [
     name: "Manchester United Retro Black",
     category: "jerseys",
     price: 35,
-    front: manchesterUnitedRetroBlackFront.url,
-    back: manuRetroBlackBackV2.url,
+    front: manuBlackFront,
+    back: manuBlackBack,
   },
 ];
 
@@ -225,6 +187,19 @@ export const CATEGORIES: { slug: Category; label: string }[] = [
 export const SIZES = ["XS", "S", "M", "L", "XL", "OS"] as const;
 export type Size = (typeof SIZES)[number];
 export const APPAREL_SIZES = ["S", "M", "L", "XL"] as const;
+
+// Only jerseys are purchasable right now; every other category is sold out.
+// Remove a category from this set when its stock is ready to sell.
+export const SOLD_OUT_CATEGORIES: ReadonlySet<Category> = new Set<Category>([
+  "shorts",
+  "accessories",
+  "hoodies",
+  "pants",
+]);
+
+export function isSoldOut(product: Product): boolean {
+  return SOLD_OUT_CATEGORIES.has(product.category);
+}
 
 export function getProduct(id: string): Product | undefined {
   return PRODUCTS.find((p) => p.id === id);

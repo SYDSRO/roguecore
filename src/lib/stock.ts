@@ -1,9 +1,9 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { PRODUCTS } from "./products";
+import { PRODUCTS, isSoldOut } from "./products";
 
 const initialStock: Record<string, number> = Object.fromEntries(
-  PRODUCTS.map((p) => [p.id, p.category === "jerseys" ? 4 : 0]),
+  PRODUCTS.map((p) => [p.id, isSoldOut(p) ? 0 : 4]),
 );
 
 interface StockState {
@@ -41,7 +41,13 @@ export const useStock = create<StockState>()(
 
       merge: (persisted, current) => {
         const p = (persisted as StockState | undefined)?.stock ?? {};
-        return { ...current, stock: { ...initialStock, ...p } };
+        const stock: Record<string, number> = { ...initialStock, ...p };
+        // Sold-out products are always 0, even if an earlier visit stored
+        // a positive quantity for them in this browser.
+        for (const product of PRODUCTS) {
+          if (isSoldOut(product)) stock[product.id] = 0;
+        }
+        return { ...current, stock };
       },
     },
   ),
